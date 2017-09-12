@@ -132,3 +132,47 @@ git show <commit-id>
 [https://try.github.io/levels/1/challenges/1](https://try.github.io/levels/1/challenges/1)
 
 ---
+
+### Состояния рабочей копии
+
+* Untracked
+* Tracked
+  * unmodified
+  * modified
+  * staged
+
++++
+
+Смотрим текущее состояние рабочей копии
+
+```
+git status
+```
+
+Перевод Untracked -> Tracked
+и перевод modified -> staged
+```
+git add .
+```
+
+Перевод staged -> unmodified
+```
+git commit
+```
+
+Перевод staged -> modified
+```
+git reset <path>
+```
+
+Перевод modified -> unmodified
+
+```
+git checkout path/to/file
+```
+
++++
+
+### Литература
+
+[https://git-scm.com/book/ru/v2](https://git-scm.com/book/ru/v2)
