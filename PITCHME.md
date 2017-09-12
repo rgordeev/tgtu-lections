@@ -2,7 +2,7 @@
 
 ### Подготовка окружения
 
-+++
+---
 
 ### Системы контроля версий
 
@@ -74,3 +74,61 @@ Git, Bazaar, Mercurial
 ---
 
 ### Git
+
++++
+
+### Установка git
+
+* https://git-scm.com
+* `apt-get install git` (linux)
+* `brew install git` (mac)
+
++++
+
+Конфигурирование git
+
+```
+git config --global user.name = "Some Name"
+git config --global user.email = "some@mail.com"
+```
+
++++
+
+Инициализация репозитория
+
+```
+git init
+```
+
+Посмотреть настройки репозитория
+```
+cat .git/config
+git config --list
+```
+
++++
+
+Фиксирование изменений
+
+```
+git add .
+git commit -m "some comment"
+```
+
++++
+
+Работа с историей
+
+```
+git log
+git log -p
+git show <commit-id>
+```
+
++++
+
+### Практика
+
+[https://try.github.io/levels/1/challenges/1](https://try.github.io/levels/1/challenges/1)
+
+---
