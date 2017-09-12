@@ -297,3 +297,9 @@ git pull
 git fetch
 git merge|rebase
 ```
+
+---
+
+Ссылки
+
+[https://ru.hexlet.io](https://ru.hexlet.io)
