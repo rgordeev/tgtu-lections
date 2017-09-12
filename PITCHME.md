@@ -210,3 +210,38 @@ git branch
 +++?image=assets/branches1.jpg
 
 +++?image=assets/branches2.jpg
+
++++
+
+Создание новых веток
+```
+git branch new-feature
+```
+
+Переключение между ветками и коммитами
+
+```
+git checkout new-feature
+```
+
++++
+
+### Merge
+
++++?image=assets/branches3.jpg
+
++++
+
+Объединение веток
+```
+git checkout master
+git merge new-feature
+```
+
++++
+
+### Практика 
+
+[http://learngitbranching.js.org/](http://learngitbranching.js.org/)
+
+---
