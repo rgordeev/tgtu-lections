@@ -195,3 +195,18 @@ git checkout path/to/file
   * Repository
 
 ---
+
+### Ветвления в git
+
++++
+
+Информация о ветках в репозитории
+
+```
+git status
+git branch
+```
+
++++?image=assets/branches1.jpg
+
++++?image=assets/branches2.jpg
