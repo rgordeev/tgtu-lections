@@ -149,23 +149,25 @@ git show <commit-id>
 git status
 ```
 
-Перевод Untracked -> Tracked
-и перевод modified -> staged
+Перевод Untracked в Tracked
+а также modified в staged
 ```
 git add .
 ```
 
-Перевод staged -> unmodified
+Перевод staged в unmodified
 ```
 git commit
 ```
 
-Перевод staged -> modified
++++
+
+Перевод staged в modified
 ```
 git reset <path>
 ```
 
-Перевод modified -> unmodified
+Перевод modified в unmodified
 
 ```
 git checkout path/to/file
@@ -176,3 +178,20 @@ git checkout path/to/file
 ### Литература
 
 [https://git-scm.com/book/ru/v2](https://git-scm.com/book/ru/v2)
+
+---
+
+### Принципы Git
+
++++
+
+1. Ревизии основаны на снепшотах
+2. Все операции локальны (равноправность репозиториев)
+3. Целостность (отсеживаются все изменения)
+4. Изменение только за счет добавления
+5. Три состояния
+  * Рабочая копия
+  * Staging area
+  * Repository
+
+---
