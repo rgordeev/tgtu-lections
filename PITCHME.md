@@ -245,3 +245,55 @@ git merge new-feature
 [http://learngitbranching.js.org/](http://learngitbranching.js.org/)
 
 ---
+
+### Работа с несколькими репозиториями
+
++++?image=assets/remotegit.jpg
+
++++
+
+Создаем репозиторий без рабочей копии
+
+```
+cd example
+git init --bare
+```
+
+Клонируем его 
+```
+cd /tmp
+git clone ~/example
+```
+
+Смотрим историю
+```
+cd emaple
+git log --oneline
+```
+
++++
+
+Удаленные репозитории
+
+```
+git remote -v
+cat .git/config
+```
+
++++
+
+Отправить изменения в удаленный репозиторий
+
+```
+git push
+```
+
+Получить изменения из удаленного репозитория
+```
+git pull
+```
+
+```
+git fetch
+git merge|rebase
+```
