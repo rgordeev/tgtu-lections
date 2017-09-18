@@ -12,7 +12,7 @@ hexlet.io
 man <command-name>
 ```
 
-----
+---
 
 ### Навигация
 
@@ -22,8 +22,10 @@ man <command-name>
 
 Вывод информации о папках и файлах
 
-* `pwd`
-* `ls`
+```
+pwd
+ls
+```
 
 +++
 
@@ -58,7 +60,6 @@ tree <path>
 +++
 
 ```
-
 mv <dir1> <dir2>
 
 mv <dir1>/* <dir2>
@@ -68,17 +69,15 @@ rm <path-to-file>
 rm -f <path-to-dir>
 
 rm -r <path>/*
-
 ```
 
-----
+---
 
 ### Просмотр содержимого файла
 
 +++
 
 ```
-
 cat <file-name>
 
 head <file-name>
@@ -89,3 +88,17 @@ tail -f <file-name>
 
 grep <reg-exp>
 ```
+
+---
+
+### Постраничный вывод (пейджинг)
+
++++
+
+```
+less <file-name>
+
+more <file-name>
+```
+
+---
