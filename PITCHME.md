@@ -1,212 +1,68 @@
 ---
 
-### Основы *nix систем и работы с терминалом
-
-hexlet.io
+### Основы HTTP
 
 ---
 
-### Справка по доступным командам терминала
+### Базовые принципы HTTP
 
-```
-man <command-name>
-```
+HTTP - протокол прикладного уровня передачи данных согласно модели OSI. Основой HTTP является технология «клиент-сервер», то есть предполагается существование:
 
----
-
-### Навигация
-
-+++?image=assets/fs-structure.png
+* Потребителей (клиентов), которые инициируют соединение и посылают запрос;
+* Поставщиков (серверов), которые ожидают соединения для получения запроса, производят необходимые действия и возвращают обратно сообщение с результатом.
 
 +++
 
-Вывод информации о папках и файлах
+Текстовый протокол без сессий и состояний
 
 ```
-pwd
-ls
+user (request) -> server
+user <- (response) server
 ```
 
 +++
 
-Смена текущего каталога
+### Пример запроса HTTP
 
 ```
-cd <path>
-cd
-cd ~/<path in home dir>
-cd /<absolute path>
-cd <relative-path>
-```
+telnet google.com 80
 
----
+GET / HTTP/1.1      <-- request line
+host: google.com    <-- обязательный атрибут виртуальный хост
+user-agent: mozilla
+connection: close | keep-alive
 
-### Управление файловой структурой
-
-+++
-
-```
-mkdir
-
-mkdir <dir name>
-
-mkdir -p <dir name>/<another>/<some more>
-
-touch <path>/<file-name>
-
-tree <path>
 ```
 
 +++
 
+### Тело запроса
+
 ```
-mv <dir1> <dir2>
+telnet google.com 80
 
-mv <dir1>/* <dir2>
-
-rm <path-to-file>
-
-rm -f <path-to-dir>
-
-rm -r <path>/*
+POST / HTTP/1.1
+host: google.com
+content-length: 28
+connection: close
+content-type: text/plain | application/octet-stream
 ```
-
----
-
-### Просмотр содержимого файла
 
 +++
 
-```
-cat <file-name>
-
-head <file-name>
-
-tail <file-name>
-
-tail -f <file-name>
-
-grep <reg-exp>
-```
-
----
-
-### Постраничный вывод (пейджинг)
-
-+++
+### Отправка форм
 
 ```
-less <file-name>
+telnet google.com 80
 
-more <file-name>
+POST / HTTP/1.1
+host: google.com
+content-length: 28
+content-type: application/x-www-form-urlencoded
 ```
 
----
-
-### Работа с документацией
-
-+++
-
 ```
-man man
+login=log in1&password=pass=20
 
-man ls
-
-man -f man
-
-man 5 man.config
-```
-
----
-
-### Переменные окружения
-
-+++
-
-```
-# установить переменную окружения
-MY_HOME=$HOME/mydir
-
-# удалить переменную окружения
-unset MY_HOME
-
-# список переменных окружения
-env
-
-# inline инициализация переменных
-MY_VAR=5 ./some_script
-
-# export делает доступной переменную в env
-export MY_VAR=5
-./some_script
-```
-
----
-
-### Перенаправления и потоки
-
-+++
-
-```
-# записать в файл
-echo 'Hello!' > my_file
-
-# прочитать файл 
-sort < my_file
-
-# перенаправление
-sort < my_file > sorted_file
-
-# pipeline
-cat my_file | sort
-
-ls | grep 'a' | grep 'b'
-
-ls | grep 'a' | wc
-```
-
----
-
-### Работа с историей
-
-+++
-
-```
-# история вызовов
-~/.bash_history
-
-# работа с историей
-history
-
-# повторить вызов из истории
-!<номер вызова>
-
-# повторить последний вызов
-!!
-
-# последний вызов совпадающий с шаблоном
-!cat
-
-# поиск по истории
-CTRL + R
-```
-
----
-
-### Псевдонимы
-
-+++
-
-```
-# список псевдонимов
-alias
-
-# установить алиас 
-alias l='ls -alF' 
-
-# вычислить алиас
-type l
-
-# сбросить алиас
-unalias l
+login=log%20in1&password=pass%3D20
 ```
