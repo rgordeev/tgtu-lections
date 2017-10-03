@@ -119,6 +119,4 @@ Location: http://www.google.ru/?gfe_rd=cr&dcr=0&ei=DejTWZnVM6q5ygXslIHwAQ
 
 ### Базовая аутентификация
 
-```
-https://www.httpwatch.com/httpgallery/authentication/#showExample10
-```
+[https://www.httpwatch.com/httpgallery/authentication/#showExample10](https://www.httpwatch.com/httpgallery/authentication/#showExample10)
